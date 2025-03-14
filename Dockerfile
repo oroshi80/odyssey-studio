@@ -2,7 +2,9 @@ FROM python:3.9-slim
 
 # Install system dependencies for MySQL client
 RUN apt-get update && apt-get install -y \
+    gcc \
     libmariadb-dev \
+    make \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
