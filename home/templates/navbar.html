@@ -1,0 +1,11 @@
+<nav class="bg-gray-800/50 text-white p-4 flex justify-between items-center h-[80px] sticky top-0 z-10 backdrop-blur-md border-b-2 border-gray-700">
+    <div>
+        <span class="text-4xl font-bold mb-8 glow-text orbitron">Odyssey Studio</span>
+    </div>
+    <div>
+        <a href="/" class="{% if active_page == 'home' %}underline decoration-blue-500 underline-offset-4 decoration-2{% endif %} hover:text-gray-300">Home</a>
+        <a href="/about" class="{% if active_page == 'about' %}underline decoration-blue-500 underline-offset-4 decoration-2{% endif %} hover:text-gray-300 ml-4">About</a>
+        <a href="/contact" class="{% if active_page == 'contact' %}underline decoration-blue-500 underline-offset-4 decoration-2{% endif %} hover:text-gray-300 ml-4">Contact</a>
+    </div>
+</nav>
+

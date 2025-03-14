@@ -1,0 +1,32 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.swp
+
+# Virtual Environment (if using venv)
+venv/
+.env
+
+# Database & migrations (if using SQLite, logs)
+db.sqlite3
+*.log
+
+# Node.js
+node_modules/
+
+# Django static and media (optional)
+staticfiles/
+media/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code & JetBrains (PyCharm) settings
+.vscode/
+.idea/
+
+# Ignore Django migrations cache (optional)
+**/migrations/*.pyc
+**/migrations/__pycache__/

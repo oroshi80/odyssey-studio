@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Odyssey Studio{% endblock %}
+
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
+
+{% block content %}
+<h1 class="text-5xl text-white ml-5 mb-8">Welcome to Odyssey-Studio</h1> 
+<div class="flex flex-col items-center justify-center mt-20">
+
+<p class="text-white text-lg mb-6 fade-in"> We're working hard to bring you something amazing. Stay tuned! </p> 
+<p class="text-white text-lg mb-8 fade-in">Meanwhile, check out: </p> 
+
+<div class="flex flex-col items-center space-y-4 fade-in"> 
+    <a href="https://chat.odyssey-studio.co.uk/" target="_blank" class="text-lg font-semibold text-white px-6 py-3 
+           rounded-full bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-lg glow-text">
+        🚀 Chat Server 
+    </a> 
+    <a href="https://kelvin.odyssey-studio.co.uk/" target="_blank" class="text-lg font-semibold text-white px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 transition duration-300 
+           shadow-lg glow-text">
+        🎨 Kelvin's Portfolio 
+    </a> 
+</div> 
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
