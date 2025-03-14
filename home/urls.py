@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import home, about, contact  # Changed from index to home
+from . import views
 
 urlpatterns = [
-    path('', home, name='index'),  # Maps '/' to the home page
-    path('about', about, name='about'),
-    path('contact', contact, name='contact')
+    path('', views.home, name='index'),  # Maps '/' to the home page
+    path('about', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
+    path('success/', views.success, name='success'),  
 ]

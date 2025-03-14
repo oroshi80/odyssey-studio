@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Odyssey Studio{% endblock %}</title>
+    {% comment %} Tailwind CSS framework {% endcomment %}
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    {% comment %} Google Fonts {% endcomment %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {% comment %} FontAwesome  {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/focusRing.js' %}" defer></script>
+    
 </head>
 <body class="bg-gradient-to-br from-gray-800 to-black text-white flex flex-col min-h-screen">
 

@@ -30,3 +30,14 @@ media/
 # Ignore Django migrations cache (optional)
 **/migrations/*.pyc
 **/migrations/__pycache__/
+
+# Docker-specific files
+*.container
+*.tar
+docker-compose.override.yml
+.env
+
+# Docker volumes and cache
+volumes/
+dbdata/
+mysqldata/

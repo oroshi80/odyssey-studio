@@ -1,9 +1,12 @@
-
+body {
+  font-family: Verdana, Tahoma, Geneva, sans-serif;
+}
 
 @keyframes glow { 0% { text-shadow: 0 0 10px #fff, 0 0 20px #38bdf8, 0 0 30px #38bdf8; } 50% { text-shadow: 0 0 20px #fff, 0 0 30px #0ea5e9, 0 0 40px #0ea5e9; } 100% { text-shadow: 0 0 10px 
     #fff, 0 0 20px #38bdf8, 0 0 30px #38bdf8; }
 }
 .glow-text { animation: glow 1.5s infinite alternate; } .fade-in { animation: fadeIn 1.5s ease-out; } @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } 
+
 
 .orbitron {
     font-family: "Orbitron", sans-serif;
@@ -35,4 +38,31 @@
     font-weight: 700;
     font-style: italic;
   }
-  
+
+  .arial {
+      font-family: "Arial", sans-serif;
+  }
+
+  @keyframes floatRing {
+    0% {
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 10px 4px rgba(16, 185, 129, 0.8);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5);
+        transform: scale(1);
+    }
+}
+
+.contact-input {
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Active focus ring effect */
+.active-ring {
+    animation: floatRing 0.4s ease-in-out forwards;
+}
