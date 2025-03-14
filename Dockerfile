@@ -1,18 +1,25 @@
-# Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+# Install necessary system dependencies for mysqlclient
+RUN apt-get update && apt-get install -y \
+    pkg-config \
+    libmysqlclient-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
-# Install dependencies
+# Copy the requirements file
 COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the current directory contents into the container
+# Upgrade pip and install Python dependencies
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of your application
 COPY . /app/
 
-# Expose the port Django runs on
+# Expose port (if you need it for your Django app)
 EXPOSE 8010
 
-# Run the Django application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8010"]
+# Set the entrypoint for your application (adjust as necessary)
+CMD ["gunicorn", "--bind", "0.0.0.0:8010", "odyssey_studio.wsgi:application"]
