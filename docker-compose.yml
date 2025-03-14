@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  django-app:
+    image: localhost/django-app:latest
+    command: gunicorn odyssey_studio.wsgi:application --bind 0.0.0.0:8010
+    ports:
+      - "8010:8010"
+    environment:
+      - DEBUG=True
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
