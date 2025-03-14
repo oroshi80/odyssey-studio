@@ -43,8 +43,7 @@ SECRET_KEY = 'django-insecure-wb=-7zl*o@4vg80y!bqkucikpnh4nm_#!qd-0m9)la6thv*)6+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = TF_DEBUG
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['192.168.0.4', 'localhost', '127.0.0.1']
 
 # Application definition
 
